@@ -1,0 +1,117 @@
+@font-face {
+    src: url(/Fonts/Dashhorizon-eZ5wg.otf);
+    font-family: SpaceFont;
+}
+
+.spaceMissonFont {
+    font-family: SpaceFont;
+}
+
+body {
+    background-image: url(/assets/RPSLSbakcground.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.header {
+    background-color: #460000;
+    height: 141px;
+    margin-top: 33px;
+}
+
+.headerTxtStyle {
+    font-family: SpaceFont;
+    line-height: 4rem;
+    color: white;
+    font-size: 52px;
+    display: flex;
+    justify-content: center;
+}
+
+.gameSelect {
+    margin-top: 64px;
+    background-color: black;
+    background-size: cover;
+    font-size: 52px;
+    color: #CDCDCD;
+    display: flex;
+    justify-content: center;
+    width: 631px;
+}
+
+.homeBtnBG {
+    margin-top: 56px;
+    padding: 2rem;
+    background-color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.reveal {
+    display: block;
+}
+
+.bestOfBG {
+    background-color: black;
+    background-size: cover;
+    color: #245B79;
+    font-size: 65px;
+    line-height: 6rem;
+    border-radius: 10px;
+    font-family: SpaceFont;
+}
+
+.bestMargin {
+    padding-top: 6rem;
+}
+
+.compSelect {
+    background-color: black;
+    border-radius: 100%;
+}
+
+.compSelectMargin {
+    margin-top: 6rem;
+}
+
+.navbar-brand {
+    background-color: black;
+}
+
+.navWord {
+    color: #245B79;
+}
+
+.scoreBG {
+    background-color: black;
+    color: white;
+    display: cover;
+    width: 300px;
+    font-family: SpaceFont;
+}
+
+.textBG {
+    background-color: black;
+    font-size: 38px;
+    color: white;
+    display: cover;
+    width: 308px;
+    margin-bottom: 12px;
+    padding-left: 1rem;
+}
+
+.spockBtn {
+    background-image: url(/assets/Spock\ \(2\).png);
+    background-size: 100%;
+}
+
+.tiePicture {
+    background-image: url(/assets/istockphoto-157180004-612x612-removebg-preview.png);
+    background-size: 65%;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 500px;
+    margin-left: 600px;
+}
