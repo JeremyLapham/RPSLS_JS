@@ -115,3 +115,8 @@ body {
     width: 500px;
     margin-left: 600px;
 }
+
+.playerButtonSize {
+    width:250px;
+    height:250px;
+}

@@ -1,3 +1,5 @@
+import { playerSelections, playerSlection2 } from '/scripts/playerSelections.js';
+
 //Home page
 let ResetGame = document.getElementById('ResetGame');
 let headerText = document.getElementById('headerText');
@@ -87,7 +89,6 @@ let savedName2 = '';
 
 let playerScoreName1 = document.getElementById('playerScoreName1');
 let playerScoreName2 = document.getElementById('playerScoreName2');
-
 // starting function to display starting text and buttons
 function headerStartUp() {
     headerText.textContent = 'Welcome To';
@@ -119,21 +120,13 @@ twoplayerBtn.addEventListener('click', function () {
     playersVs.classList.remove('hide');
 });
 //Ending of those buttons
-
 player1Name.addEventListener('keydown', function (event) {
-    let chacters = /^[\S]+$/;
-    if (event.key === 'Enter') {
-        if (player1Name.value.match(chacters)) {
-            savedName1 = player1Name.value;
-            savedName2 = Player2Name.value;
-        }
-    }
+    playerNames()
 });
-
-Player2Name.addEventListener('keydown', function (event) {
+function playerNames() {
     let chacters = /^[\S]+$/;
     if (event.key === 'Enter') {
-        if (player1Name.value.match(chacters)) {
+        if (player1Name.value.match(chacters) && Player2Name.value.match(chacters)) {
             savedName1 = player1Name.value;
             savedName2 = Player2Name.value;
             bestAllplayer.classList.remove('hide');
@@ -142,8 +135,10 @@ Player2Name.addEventListener('keydown', function (event) {
             headerText2.textContent = 'Select your number of wins';
         }
     }
+}
+Player2Name.addEventListener('keydown', function (event) {
+    playerNames()
 });
-
 //Computer Best 1 of 1 -----------------------------------------------------------------------------
 best1.addEventListener('click', function () {
     round = 1;
@@ -246,53 +241,55 @@ best1P.addEventListener('click', function () {
     headerText2.textContent = '';
     player1Select.classList.remove('hide');
     bestAllplayer.classList.add('hide');
+    playerSelections();
+    playerSlection2()
 
-    p1Rock.addEventListener('click', function () {
-        player1 = p1Rock.value;
+    player1Rock.addEventListener('click', function () {
+        player1 = player1Rock.value;
         headerChangeAndSelects()
     });
 
-    p1Paper.addEventListener('click', function () {
-        player1 = p1Paper.value;
+    player1Paper.addEventListener('click', function () {
+        player1 = player1Paper.value;
         headerChangeAndSelects()
     });
 
-    p1Spock.addEventListener('click', function () {
-        player1 = p1Spock.value;
+    player1Spock.addEventListener('click', function () {
+        player1 = player1Spock.value;
         headerChangeAndSelects()
     });
 
-    p1Scissor.addEventListener('click', function () {
-        player1 = p1Scissor.value;
+    player1Scissors.addEventListener('click', function () {
+        player1 = player1Scissors.value;
         headerChangeAndSelects()
     });
 
-    p1Lizard.addEventListener('click', function () {
-        player1 = p1Lizard.value;
+    player1Lizard.addEventListener('click', function () {
+        player1 = player1Lizard.value;
         headerChangeAndSelects()
     });
-    p2Rock.addEventListener('click', function () {
-        player2 = p2Rock.value;
+    player2Rock.addEventListener('click', function () {
+        player2 = player2Rock.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Paper.addEventListener('click', function () {
-        player2 = p2Paper.value;
+    player2Paper.addEventListener('click', function () {
+        player2 = player2Paper.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Spock.addEventListener('click', function () {
-        player2 = p2Spock.value;
+    player2Spock.addEventListener('click', function () {
+        player2 = player2Spock.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Scissor.addEventListener('click', function () {
-        player2 = p2Scissor.value;
+    player2Scissors.addEventListener('click', function () {
+        player2 = player2Scissors.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Lizard.addEventListener('click', function () {
-        player2 = p2Lizard.value;
+    player2Lizard.addEventListener('click', function () {
+        player2 = player2Lizard.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
@@ -301,53 +298,55 @@ best1P.addEventListener('click', function () {
 best5P.addEventListener('click', function () {
     round = 3;
     player5And7()
+    playerSelections();
+    playerSlection2();
 
-    p1Rock.addEventListener('click', function () {
-        player1 = p1Rock.value;
+    player1Rock.addEventListener('click', function () {
+        player1 = player1Rock.value;
         headerChangeAndSelects()
     });
 
-    p1Paper.addEventListener('click', function () {
-        player1 = p1Paper.value;
+    player1Paper.addEventListener('click', function () {
+        player1 = player1Paper.value;
         headerChangeAndSelects()
     });
 
-    p1Spock.addEventListener('click', function () {
-        player1 = p1Spock.value;
+    player1Spock.addEventListener('click', function () {
+        player1 = player1Spock.value;
         headerChangeAndSelects()
     });
 
-    p1Scissor.addEventListener('click', function () {
-        player1 = p1Scissor.value;
+    player1Scissors.addEventListener('click', function () {
+        player1 = player1Scissors.value;
         headerChangeAndSelects()
     });
 
-    p1Lizard.addEventListener('click', function () {
-        player1 = p1Lizard.value;
+    player1Lizard.addEventListener('click', function () {
+        player1 = player1Lizard.value;
         headerChangeAndSelects()
     });
-    p2Rock.addEventListener('click', function () {
-        player2 = p2Rock.value;
+    player2Rock.addEventListener('click', function () {
+        player2 = player2Rock.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Paper.addEventListener('click', function () {
-        player2 = p2Paper.value;
+    player2Paper.addEventListener('click', function () {
+        player2 = player2Paper.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Spock.addEventListener('click', function () {
-        player2 = p2Spock.value;
+    player2Spock.addEventListener('click', function () {
+        player2 = player2Spock.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Scissor.addEventListener('click', function () {
-        player2 = p2Scissor.value;
+    player2Scissors.addEventListener('click', function () {
+        player2 = player2Scissors.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Lizard.addEventListener('click', function () {
-        player2 = p2Lizard.value;
+    player2Lizard.addEventListener('click', function () {
+        player2 = player2Lizard.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
@@ -356,64 +355,58 @@ best5P.addEventListener('click', function () {
 best7P.addEventListener('click', function () {
     round = 4;
     player5And7()
+    playerSelections();
+    playerSlection2();
 
-    p1Rock.addEventListener('click', function () {
-        player1 = p1Rock.value;
+    player1Rock.addEventListener('click', function () {
+        player1 = player1Rock.value;
         headerChangeAndSelects()
     });
 
-    p1Paper.addEventListener('click', function () {
-        player1 = p1Paper.value;
+    player1Paper.addEventListener('click', function () {
+        player1 = player1Paper.value;
         headerChangeAndSelects()
     });
 
-    p1Spock.addEventListener('click', function () {
-        player1 = p1Spock.value;
+    player1Spock.addEventListener('click', function () {
+        player1 = player1Spock.value;
         headerChangeAndSelects()
     });
 
-    p1Scissor.addEventListener('click', function () {
-        player1 = p1Scissor.value;
+    player1Scissors.addEventListener('click', function () {
+        player1 = player1Scissors.value;
         headerChangeAndSelects()
     });
 
-    p1Lizard.addEventListener('click', function () {
-        player1 = p1Lizard.value;
+    player1Lizard.addEventListener('click', function () {
+        player1 = player1Lizard.value;
         headerChangeAndSelects()
     });
-    p2Rock.addEventListener('click', function () {
-        player2 = p2Rock.value;
+    player2Rock.addEventListener('click', function () {
+        player2 = player2Rock.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Paper.addEventListener('click', function () {
-        player2 = p2Paper.value;
+    player2Paper.addEventListener('click', function () {
+        player2 = player2Paper.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Spock.addEventListener('click', function () {
-        player2 = p2Spock.value;
+    player2Spock.addEventListener('click', function () {
+        player2 = player2Spock.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Scissor.addEventListener('click', function () {
-        player2 = p2Scissor.value;
+    player2Scissors.addEventListener('click', function () {
+        player2 = player2Scissors.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-    p2Lizard.addEventListener('click', function () {
-        player2 = p2Lizard.value;
+    player2Lizard.addEventListener('click', function () {
+        player2 = player2Lizard.value;
         player2Select.classList.add('hide');
         playerVsPlayerIf()
     });
-});
-
-ResetGame.addEventListener('click', function () {
-    headerStartUp();
-    ResetGame.classList.add('hide');
-    winnerWinnerChickenDinner.classList.add('hide');
-    loserLoserSuckLess.classList.add('hide');
-    tie.classList.add('hide');
 });
 //Button for computer vs player
 nextRoundBtn.addEventListener('click', function () {
@@ -444,12 +437,12 @@ nextRoundBtn.addEventListener('click', function () {
 nextRoundBtn2.addEventListener('click', function () {
     nextRoundBtn2.classList.add('hide');
     player1Select.classList.remove('hide');
+    player2Select.classList.add('hide');
     headerText.textContent = savedName1 + ' next choose your option';
     headerText2.textContent = '';
-    player1Select.classList.remove('hide');
     bestAllplayer.classList.add('hide');
     tie.classList.add('hide');
-    if (player1Wins === round) {
+    if (player1Wins >= round) {
         headerText.textContent = savedName1.toUpperCase() + '  WON!';
         headerText2 = '';
         ResetGame.classList.remove('hide');
@@ -457,7 +450,7 @@ nextRoundBtn2.addEventListener('click', function () {
         winnerWinnerChickenDinnerPlayer1.classList.remove('hide');
         scoresPlay.classList.add('hide');
     }
-    else if (player2Wins === round) {
+    else if (player2Wins >= round) {
         headerText.textContent = savedName2.toUpperCase() + ' WON!'
         headerText2.textContent = '';
         ResetGame.classList.remove('hide');
@@ -478,20 +471,20 @@ function playerVsPlayerIf() {
     }
     else if (player1 === 'Rock' && player2 === 'Paper' ||
         player1 === 'Rock' && player2 === 'Spock' ||
-        player1 === 'Scissor' && player2 === 'Rock' ||
-        player1 === 'Scissor' && player2 === 'Lizard' ||
-        player1 === 'Paper' && player2 === 'Scissor' ||
+        player1 === 'Scissors' && player2 === 'Rock' ||
+        player1 === 'Scissors' && player2 === 'Spock' ||
+        player1 === 'Paper' && player2 === 'Scissors' ||
         player1 === 'Paper' && player2 === 'Lizard' ||
         player1 === 'Spock' && player2 === 'Paper' ||
         player1 === 'Spock' && player2 === 'Lizard' ||
         player1 === 'Lizard' && player2 === 'Rock' ||
-        player1 === 'Lizard' && player2 === 'Scissor') {
+        player1 === 'Lizard' && player2 === 'Scissors') {
         headerText.textContent = savedName2 + ' Gets the point!';
         compSelect.classList.add('hide');
+
         player2Wins++;
         play1Score.innerHTML = player1Wins;
         play2Score.innerHTML = player2Wins;
-        console.log(player2Wins);
         nextRoundBtn2.classList.remove('hide');
     }
     else {
@@ -500,7 +493,6 @@ function playerVsPlayerIf() {
         player1Wins++;
         play1Score.innerHTML = player1Wins;
         play2Score.innerHTML = player2Wins;
-        console.log(player1Wins);
         nextRoundBtn2.classList.remove('hide');
     }
 }
@@ -512,7 +504,16 @@ function computerVsPlayer() {
         tie.classList.remove('hide');
         ResetGame.classList.remove('hide');
     }
-    else if (computerAnswer === 'Spock' || computerAnswer === 'Paper') {
+    else if (userComputerSelect === 'Rock' && computerAnswer === 'Paper' ||
+        userComputerSelect === 'Rock' && computerAnswer === 'Spock' ||
+        userComputerSelect === 'Scissors' && computerAnswer === 'Rock' ||
+        userComputerSelect === 'Scissors' && computerAnswer === 'Spock' ||
+        userComputerSelect === 'Paper' && computerAnswer === 'Scissors' ||
+        userComputerSelect === 'Paper' && computerAnswer === 'Lizard' ||
+        userComputerSelect === 'Spock' && computerAnswer === 'Paper' ||
+        userComputerSelect === 'Spock' && computerAnswer === 'Lizard' ||
+        userComputerSelect === 'Lizard' && computerAnswer === 'Rock' ||
+        userComputerSelect === 'Lizard' && computerAnswer === 'Scissors') {
         computerWins++;
         headerText.textContent = 'Computer Wins!';
         compSelect.classList.add('hide');
@@ -537,7 +538,16 @@ function computerVsPlayer2() {
         computerScore.innerHTML = computerWins;
         userScore.innerHTML = playerWins;
     }
-    else if (computerAnswer === 'Spock' || computerAnswer === 'Paper') {
+    else if (userComputerSelect === 'Rock' && computerAnswer === 'Paper' ||
+        userComputerSelect === 'Rock' && computerAnswer === 'Spock' ||
+        userComputerSelect === 'Scissors' && computerAnswer === 'Rock' ||
+        userComputerSelect === 'Scissors' && computerAnswer === 'Spock' ||
+        userComputerSelect === 'Paper' && computerAnswer === 'Scissors' ||
+        userComputerSelect === 'Paper' && computerAnswer === 'Lizard' ||
+        userComputerSelect === 'Spock' && computerAnswer === 'Paper' ||
+        userComputerSelect === 'Spock' && computerAnswer === 'Lizard' ||
+        userComputerSelect === 'Lizard' && computerAnswer === 'Rock' ||
+        userComputerSelect === 'Lizard' && computerAnswer === 'Scissors') {
         computerWins++;
         headerText.textContent = 'Computer Gets The Point!';
         compSelect.classList.add('hide');
@@ -556,13 +566,11 @@ function computerVsPlayer2() {
         userScore.innerHTML = playerWins;
     }
 }
-
 function headerChangeAndSelects() {
     headerText.textContent = savedName2 + ' Now choose your option';
     player1Select.classList.add('hide');
     player2Select.classList.remove('hide');
 }
-
 function player5And7() {
     headerText.textContent = savedName1 + ' choose your option';
     headerText2.textContent = '';
@@ -574,7 +582,6 @@ function player5And7() {
     player1Select.classList.remove('hide');
     bestAllplayer.classList.add('hide');
 }
-
 function computer5And7() {
     headerText.textContent = 'Now choose your option';
     headerText2.textContent = '';
@@ -584,7 +591,6 @@ function computer5And7() {
     compSelect.classList.remove('hide');
     bestAll.classList.add('hide');
 }
-
 function startingBtnsFunction() {
     computerBtn.classList.add('hide');
     twoplayerBtn.classList.add('hide');
@@ -593,7 +599,6 @@ function startingBtnsFunction() {
     twoPlayerText.textContent = '';
     howToPlay.classList.add('hide');
 }
-
 function RPSLS() {
     fetch('https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption').then(
         response => response.text()
