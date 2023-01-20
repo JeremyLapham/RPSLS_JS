@@ -1,4 +1,4 @@
-
+//-----------------------Randomly places the buttons once it is called
 //let isPlayer2Selected = false;
 
 function playerSelections() {

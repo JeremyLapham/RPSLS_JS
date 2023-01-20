@@ -44,19 +44,9 @@ let compLizard = document.getElementById('compLizard');
 
 //player 1 selection
 let player1Select = document.getElementById('player1Select');
-let p1Rock = document.getElementById('p1Rock');
-let p1Paper = document.getElementById('p1Paper');
-let p1Spock = document.getElementById('p1Spock');
-let p1Scissor = document.getElementById('p1Scissor');
-let p1Lizard = document.getElementById('p1Lizard');
 
 //player 2 selecttion
 let player2Select = document.getElementById('player2Select');
-let p2Rock = document.getElementById('p2Rock');
-let p2Paper = document.getElementById('p2Paper');
-let p2Spock = document.getElementById('p2Spock');
-let p2Scissor = document.getElementById('p2Scissor');
-let p2Lizard = document.getElementById('p2Lizard');
 let nextRoundBtn2 = document.getElementById('nextRoundBtn2');
 
 //computer vs user saved
